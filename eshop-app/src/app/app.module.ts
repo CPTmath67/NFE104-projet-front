@@ -8,12 +8,18 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { ListeProduitsComponent } from './liste-produits/liste-produits.component';
+import { PanierComponent } from './panier/panier.component';
+import { ListCommandesComponent } from './list-commandes/list-commandes.component';
+import { ListAchatsComponent } from './list-achats/list-achats.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ListeProduitsComponent
+    ListeProduitsComponent,
+    PanierComponent,
+    ListCommandesComponent,
+    ListAchatsComponent
   ],
   imports: [
     BrowserModule,
