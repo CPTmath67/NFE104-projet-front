@@ -1,32 +1,45 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatIconModule } from '@angular/material/icon';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { ListeProduitsComponent } from './liste-produits/liste-produits.component';
+import {
+  MatButtonModule, MatCardModule, MatDialogModule, MatInputModule, MatTableModule,
+  MatToolbarModule, MatMenuModule, MatIconModule, MatProgressSpinnerModule
+} from '@angular/material';
 import { PanierComponent } from './panier/panier.component';
-import { ListCommandesComponent } from './list-commandes/list-commandes.component';
-import { ListAchatsComponent } from './list-achats/list-achats.component';
+import { HomeComponent } from './home/home.component';
+import { ConnexionComponent } from './connexion/connexion.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ListeProduitsComponent,
     PanierComponent,
-    ListCommandesComponent,
-    ListAchatsComponent
+    HomeComponent,
+    ConnexionComponent
   ],
   imports: [
     BrowserModule,
     MatMenuModule,
     BrowserAnimationsModule,
     MatIconModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule,
+    MatCardModule,
+    MatInputModule,
+    MatDialogModule,
+    MatTableModule,
+    MatProgressSpinnerModule,
+    MatToolbarModule,
+    FormsModule,
+    RouterModule.forRoot( [
+      { path: '', component: HomeComponent },
+      { path: 'connexion', component: ConnexionComponent }
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]

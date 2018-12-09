@@ -1,21 +1,15 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span> Eshop </span>
-  <button  color="primary" [matMenuTriggerFor]="menu">
-    <mat-icon>input</mat-icon>
-    <span>Se connecter</span>
+   <button color="primary" [routerLink]="['']"a>
+    <mat-icon>account_box</mat-icon>
+    <span>Home </span>
   </button>
-  <mat-menu #menu="matMenu">
-    <button mat-menu-item>
-      <mat-icon>account_box</mat-icon>
-      <span>Connexion vendeur</span>
-    </button>
-    <button mat-menu-item>
-      <mat-icon>card_membership</mat-icon>
-      <span>Connexion acheteur</span>
-    </button>
-  </mat-menu>
-
-  </mat-toolbar-row>
+  <span> Eshop </span>
+  <button color="primary" [routerLink]="['connexion']"a>
+    <mat-icon>account_box</mat-icon>
+    <span>Connexion </span>
+  </button>
 </mat-toolbar>
 
+<div>
+    <router-outlet></router-outlet>
+</div>
