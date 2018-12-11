@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {
   MatButtonModule, MatCardModule, MatDialogModule, MatInputModule, MatTableModule,
-  MatToolbarModule, MatMenuModule, MatIconModule, MatProgressSpinnerModule
+  MatToolbarModule, MatMenuModule, MatIconModule, MatProgressSpinnerModule, MatRadioButton, MatTabsModule
 } from '@angular/material';
 import { PanierComponent } from './panier/panier.component';
 import { HomeComponent } from './home/home.component';
@@ -19,7 +19,7 @@ import { FormsModule } from '@angular/forms';
     AppComponent,
     NavbarComponent,
     PanierComponent,
-    HomeComponent,
+    HomeComponent, 
     ConnexionComponent
   ],
   imports: [
@@ -35,6 +35,7 @@ import { FormsModule } from '@angular/forms';
     MatTableModule,
     MatProgressSpinnerModule,
     MatToolbarModule,
+    MatTabsModule,
     FormsModule,
     RouterModule.forRoot( [
       { path: '', component: HomeComponent },
