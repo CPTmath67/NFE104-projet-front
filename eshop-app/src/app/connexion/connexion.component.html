@@ -1,30 +1,32 @@
 
   <form #f="ngForm">
-    <div>
-    <mat-form-field>  
-      <input matInput name="idForm" placeholder="Login" [required]="true" ngModel
-      #title="ngModel"
-      /> 
-      <mat-error *ngIf="title.hasError('required')">
-        L'identifiant est obligatoire.
-      </mat-error>
-     
-    </mat-form-field>
-    </div> 
-    <div>
-    <mat-form-field>
-     <input matInput name="passForm" placeholder="Password" [required]="true" [(ngModel)]="password"
-      #title="ngModel"
-        /> 
-     <mat-error *ngIf="title.hasError('required')">
-       Le mot de passe est obligatoire.
-     </mat-error>
-    </mat-form-field>
-    </div>
-    <div>
-    <button mat-button (click)="sendFormConnexion(f.value)" 
-      [disabled]="f.invalid">
-      Connexion
-    </button>
-    </div>
+      <div>
+      <mat-form-field>
+       <input matInput name="loginForm" placeholder="Login" [required]="true" [(ngModel)]="Login"
+        #title="ngModel"
+          /> 
+       <mat-error *ngIf="title.hasError('required')">
+         Le login est obligatoire.
+       </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+       <input type="password" name="passForm" placeholder="Password" [required]="true" [(ngModel)]="password"
+        #title="ngModel"
+          /> 
+       <mat-error *ngIf="title.hasError('required')">
+         Le mot de passe est obligatoire.
+       </mat-error>
+      </mat-form-field>
+      </div>
+
+      <div>
+      <button mat-raised-button color="primary" mat-button (click)="sendFormConnexion(f.value)" 
+        [disabled]="f.invalid">
+        Connexion
+      </button>
+      <button mat-raised-button color="primary" [routerLink]="['..','account-creation']"a>
+        Créer un compte
+      </button>
+      </div>
   </form>
+

@@ -1,18 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule, Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {
   MatButtonModule, MatCardModule, MatDialogModule, MatInputModule, MatTableModule,
-  MatToolbarModule, MatMenuModule, MatIconModule, MatProgressSpinnerModule, MatRadioButton, MatTabsModule
+  MatToolbarModule, MatMenuModule, MatIconModule, MatProgressSpinnerModule, MatTabsModule, MatRadioModule
 } from '@angular/material';
 import { PanierComponent } from './panier/panier.component';
 import { HomeComponent } from './home/home.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { FormsModule } from '@angular/forms';
+import { AccountCreationComponent } from './account-creation/account-creation.component';
+
+  const routes : Routes = [
+      { path: '', component: HomeComponent },
+      { path: 'connexion', component: ConnexionComponent },
+      { path: 'account-creation', component: AccountCreationComponent }
+  ]
 
 @NgModule({
   declarations: [
@@ -20,8 +27,9 @@ import { FormsModule } from '@angular/forms';
     NavbarComponent,
     PanierComponent,
     HomeComponent, 
-    ConnexionComponent
+    ConnexionComponent, AccountCreationComponent
   ],
+
   imports: [
     BrowserModule,
     MatMenuModule,
@@ -37,10 +45,8 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatTabsModule,
     FormsModule,
-    RouterModule.forRoot( [
-      { path: '', component: HomeComponent },
-      { path: 'connexion', component: ConnexionComponent }
-    ])
+   MatRadioModule,
+   RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]

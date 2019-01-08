@@ -7,7 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConnexionComponent implements OnInit {
   selectedCategory: string;
-  category: string[] = ['Acheteur','Vendeur'];
   username: string = "toto" ;
   password: string = "toto"; 
 
