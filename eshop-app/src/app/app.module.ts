@@ -14,6 +14,7 @@ import { HomeComponent } from './home/home.component';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { FormsModule } from '@angular/forms';
 import { AccountCreationComponent } from './account-creation/account-creation.component';
+import { ProductsComponent } from './products/products.component';
 
   const routes : Routes = [
       { path: '', component: HomeComponent },
@@ -27,7 +28,7 @@ import { AccountCreationComponent } from './account-creation/account-creation.co
     NavbarComponent,
     PanierComponent,
     HomeComponent, 
-    ConnexionComponent, AccountCreationComponent
+    ConnexionComponent, AccountCreationComponent, ProductsComponent
   ],
 
   imports: [
