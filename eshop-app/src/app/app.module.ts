@@ -15,6 +15,7 @@ import { ConnexionComponent } from './connexion/connexion.component';
 import { FormsModule } from '@angular/forms';
 import { AccountCreationComponent } from './account-creation/account-creation.component';
 import { ProductsComponent } from './products/products.component';
+import { HttpClientModule } from '@angular/common/http';
 
   const routes : Routes = [
       { path: '', component: HomeComponent },
@@ -32,6 +33,7 @@ import { ProductsComponent } from './products/products.component';
   ],
 
   imports: [
+    HttpClientModule,
     BrowserModule,
     MatMenuModule,
     BrowserAnimationsModule,
