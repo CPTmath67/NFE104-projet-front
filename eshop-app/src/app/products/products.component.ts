@@ -8,7 +8,8 @@ import { ProductsService } from '../products.service';
 })
 
 export class ProductsComponent implements OnInit {
-  displayedColumns: string[] = ['Title'];
+  displayedColumns: string[] = ['Title','PageCount','ID'];
+  isLoadingResults = true; 
   dataSource;
   constructor( private productsService: ProductsService) { 
     this.productsService.getAll().subscribe( data =>{
