@@ -21,6 +21,14 @@ export class ProductDetailComponent implements OnInit {
     }); 
   }  
 
+  deleteProduct(){
+    this.route.params.subscribe(param => {
+      this.productsService.deleteProduct(param.id).subscribe(data =>{
+        this.dataSource = data;
+      })
+    })
+}
+
   ngOnInit() {
   }
 
