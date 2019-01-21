@@ -28,7 +28,7 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
       { path: 'products-list', component: ProductsComponent },
       { path: 'product-detail/:id', component: ProductDetailComponent },  
       { path: 'product-add', component: ProductAddComponent },
-      { path: 'product-edit', component: ProductEditComponent }
+      { path: 'product-edit/:id', component: ProductEditComponent }
   ]
 
 @NgModule({
