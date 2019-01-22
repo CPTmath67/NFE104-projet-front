@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { NgModule, Component } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { RouterModule, Routes, Router } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -57,8 +57,8 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
     MatTabsModule,
     FormsModule,
     ReactiveFormsModule,
-   MatRadioModule,
-   RouterModule.forRoot(routes),
+    MatRadioModule,
+    RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
