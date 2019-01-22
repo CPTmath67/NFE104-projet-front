@@ -5,4 +5,5 @@ export class Product {
   tva: number;
   price: number;
   delivery: Date;
-  picture: string }
+  picture: string
+  activate: boolean }
