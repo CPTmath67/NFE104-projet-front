@@ -20,24 +20,24 @@
       </div>
       <div class="mat-elevation-z8">
         <table mat-table [dataSource]="dataSource" class="example-table"
-               matSort matSortActive="Title" matSortDisableClear matSortDirection="asc">
+               matSort matSortActive="label" matSortDisableClear matSortDirection="asc">
     
           <!-- Product Name Column -->
-          <ng-container matColumnDef="Title">
+          <ng-container matColumnDef="label">
             <th mat-header-cell *matHeaderCellDef>Product Name</th>
-            <td mat-cell *matCellDef="let row">{{row.Title}}</td>
+            <td mat-cell *matCellDef="let row">{{row.label}}</td>
           </ng-container>
     
           <!-- Product Price Column -->
-          <ng-container matColumnDef="PageCount">
+          <ng-container matColumnDef="priceTTC">
             <th mat-header-cell *matHeaderCellDef>Product Price</th>
-            <td mat-cell *matCellDef="let row">€ {{row.PageCount  }}</td>
+            <td mat-cell *matCellDef="let row">€ {{row.priceTTC }}</td>
           </ng-container>
 
-          <ng-container matColumnDef="ID">
+          <ng-container matColumnDef="idArticle">
             <th mat-header-cell *matHeaderCellDef> Product page </th>
             <td mat-cell *matCellDef="let row"> 
-            <button mat-flat-button color="primary" [routerLink]="['/product-detail', row.ID]">See product</button>
+            <button mat-flat-button color="primary" [routerLink]="['/product-detail', row.idArticle]">See product</button>
             </td>
           </ng-container>
 

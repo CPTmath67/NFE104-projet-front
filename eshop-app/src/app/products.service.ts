@@ -8,11 +8,11 @@ import { Product } from './product';
   providedIn: 'root'
 })
 export class ProductsService {
-  private baseUrl = `http://fakerestapi.azurewebsites.net/api`;
+  private baseUrl = `http://localhost:44396/api`;
   constructor(private http: HttpClient) { }
 
   public getAll(): Observable<any>{
-    return this.http.get(`${this.baseUrl}/Books`).
+    return this.http.get(`${this.baseUrl}/Article`).
       pipe(
         map((data) =>{
           return data;
@@ -21,8 +21,8 @@ export class ProductsService {
         })
       );
   }
-  public getProductById(id:number): Observable<any>{
-    return this.http.get(`${this.baseUrl}/Books/${id}`).
+  public getProductById(IdArticle:number): Observable<any>{
+    return this.http.get(`${this.baseUrl}/Article/${IdArticle}`).
       pipe(
         map((data)=>{
           return data;
@@ -30,8 +30,8 @@ export class ProductsService {
           console.log('error',err)}
         ));
   }
-  public addProduct (value:string): Observable<any> {
-  return this.http.post(`${this.baseUrl}/product-add/`,value)
+  public addProduct (product): Observable<any> {
+  return this.http.post(`${this.baseUrl}/Article/`, product)
   .pipe(
     map((data)=>{
       return data;
@@ -41,7 +41,7 @@ export class ProductsService {
   );}
 
   public updateProduct (value:string, id): Observable<any> {
-  return this.http.put(`${this.baseUrl}/product-update/`,value)
+  return this.http.put(`${this.baseUrl}/product-update/`,{id})
   .pipe(
     map((data)=>{
       return data;
@@ -50,8 +50,8 @@ export class ProductsService {
     )
   );}
 
-  public deleteProduct ( id): Observable<any> {
-  return this.http.delete(`${this.baseUrl}/product-delete/`)
+  public deleteProduct ( idProduct: number): Observable<any> {
+  return this.http.delete (`${this.baseUrl}/Article/${idProduct}`)
   .pipe(
     map((data)=>{
       return data;
@@ -61,7 +61,7 @@ export class ProductsService {
   );}
 
   public GetImageProduct ( id): Observable<any> {
-    return this.http.get(`http://fakerestapi.azurewebsites.net/books/covers/${id}`)
+    return this.http.get(`http://fakerestapi.azurewebsites.net/api/books/covers/${id}`)
     .pipe(
       map((data)=>{
         return data;
