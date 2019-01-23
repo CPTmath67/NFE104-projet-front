@@ -16,7 +16,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AccountCreationComponent } from './account-creation/account-creation.component';
 import { ProductsComponent } from './products/products.component';
 import { HttpClientModule } from '@angular/common/http';
-import { ItemComponent } from './item/item.component';
 import { ProductDetailComponent } from "./product-detail/product-detail.component";
 import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
@@ -26,9 +25,9 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
       { path: 'connexion', component: ConnexionComponent },
       { path: 'account-creation', component: AccountCreationComponent },
       { path: 'products-list', component: ProductsComponent },
-      { path: 'product-detail/:id', component: ProductDetailComponent },  
+      { path: 'product-detail/:idArticle', component: ProductDetailComponent },  
       { path: 'product-add', component: ProductAddComponent },
-      { path: 'product-edit/:id', component: ProductEditComponent }
+      { path: 'product-edit/:idArticle', component: ProductEditComponent }
   ]
 
 @NgModule({
@@ -37,7 +36,7 @@ import { ProductEditComponent } from './product-edit/product-edit.component';
     NavbarComponent,
     PanierComponent,
     HomeComponent, 
-    ConnexionComponent, AccountCreationComponent, ProductsComponent, ItemComponent, ProductDetailComponent, ProductAddComponent, ProductEditComponent
+    ConnexionComponent, AccountCreationComponent, ProductsComponent, ProductDetailComponent, ProductAddComponent, ProductEditComponent
   ],
 
   imports: [

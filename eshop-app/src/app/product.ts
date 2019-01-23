@@ -1,9 +1,9 @@
 export class Product {
-  id: number;
-  name: string;
-  desc: string; 
-  tva: number;
-  price: number;
-  delivery: Date;
+  idArticle: number;
+  label: string;
+  description: string; 
+  priceHT: number;
+  priceTTC: number;
+  delievryTime: Date;
   picture: string
   activate: boolean }

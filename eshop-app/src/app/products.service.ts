@@ -8,11 +8,11 @@ import { Product } from './product';
   providedIn: 'root'
 })
 export class ProductsService {
-  private baseUrl = `http://localhost:44396/api`;
+  private baseUrl = `https://localhost:44396/api`;
   constructor(private http: HttpClient) { }
 
   public getAll(): Observable<any>{
-    return this.http.get(`${this.baseUrl}/Article`).
+    return this.http.get(`${this.baseUrl}/article`).
       pipe(
         map((data) =>{
           return data;
@@ -21,8 +21,8 @@ export class ProductsService {
         })
       );
   }
-  public getProductById(IdArticle:number): Observable<any>{
-    return this.http.get(`${this.baseUrl}/Article/${IdArticle}`).
+  public getProductById(idArticle: string): Observable<any>{
+    return this.http.get(`${this.baseUrl}/article/${idArticle}`).
       pipe(
         map((data)=>{
           return data;
