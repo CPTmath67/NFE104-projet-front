@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { map, catchError } from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Product } from './product';
+import { HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -31,9 +32,10 @@ export class ProductsService {
         ));
   }
   public addProduct (product): Observable<any> {
-  return this.http.post(`${this.baseUrl}/Article/`, product)
+  return this.http.post(`${this.baseUrl}/article/`, product)
   .pipe(
     map((data)=>{
+      console.log('error',data)
       return data;
     },(err) =>{
       console.log('error',err) }
