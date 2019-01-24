@@ -4,6 +4,6 @@ export class Product {
   description: string; 
   priceHT: number;
   priceTTC: number;
-  delievryTime: Date;
+  delievryTime: number;
   picture: string
   activate: boolean }
