@@ -1,12 +1,6 @@
-<p>
-  product-add works!
-</p>
+
 
 <div class="example-container mat-elevation-z8">
-  <!-- <div class="example-loading-shade"
-       *ngIf="isLoadingResults">
-    <mat-spinner *ngIf="isLoadingResults"></mat-spinner>
-  </div> -->
   <div class="button-row">
     <a mat-flat-button color="primary" [routerLink]="['/products']"><mat-icon>list</mat-icon></a>
   </div>
@@ -47,13 +41,6 @@
           <span *ngIf="!productForm.get('delievryTime').valid && productForm.get('delievryTime').touched">Please enter estimated delivery time</span>
         </mat-error>
       </mat-form-field>
-      <!-- <mat-form-field class="example-full-width">
-        <input matInput placeholder="Picture URL" formControlName="picture"
-               [errorStateMatcher]="matcher">
-        <mat-error>
-          <span *ngIf="!productForm.get('picture').valid && productForm.get('picture').touched">Please enter the URL of the product picture</span>
-        </mat-error>
-      </mat-form-field> -->   
         <div>
           <label> Should the product be displayed ?  </label>
           <mat-radio-group formControlName="activate" class="example-full-width">

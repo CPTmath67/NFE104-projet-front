@@ -3,16 +3,14 @@
       <div>
       <mat-form-field>
        <input matInput name="loginForm" placeholder="Login" [required]="true" [(ngModel)]="Login"
-        #title="ngModel"
-          /> 
+        #title="ngModel"/> 
        <mat-error *ngIf="title.hasError('required')">
          Le login est obligatoire.
        </mat-error>
       </mat-form-field>
       <mat-form-field>
        <input type="password" name="passForm" placeholder="Password" [required]="true" [(ngModel)]="password"
-        #title="ngModel"
-          /> 
+        #title="ngModel"/> 
        <mat-error *ngIf="title.hasError('required')">
          Le mot de passe est obligatoire.
        </mat-error>

@@ -21,7 +21,7 @@ import { ProductAddComponent } from './product-add/product-add.component';
 import { ProductEditComponent } from './product-edit/product-edit.component';
 
   const routes : Routes = [
-      { path: '', component: HomeComponent },
+      { path: '', component: ProductsComponent},
       { path: 'connexion', component: ConnexionComponent },
       { path: 'account-creation', component: AccountCreationComponent },
       { path: 'products-list', component: ProductsComponent },

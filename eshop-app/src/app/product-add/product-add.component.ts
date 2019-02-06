@@ -40,17 +40,15 @@ export class ProductAddComponent implements OnInit {
 
 
   onFormSubmit(form:NgForm) {
-    // this.isLoadingResults = true;
     this.productsService.addProduct(form)
-  //     .subscribe(res => {
-  //         let idArticle = res['idArticle'];
-  //         // this.isLoadingResults = false;
-  //         this.router.navigate(['/product-details', idArticle]);
-  //       }, (err) => {
-  //         console.log(err);
-  //         this.isLoadingResults = false;
-  //       });
-   }
+       .subscribe(res => {
+          let idArticle = res['idArticle'];
+           this.router.navigate(['/product-details', idArticle]);
+        }, (err) => {
+           console.log(err);
+           this.isLoadingResults = false;
+           });
+  }
 
 
 }
